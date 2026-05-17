@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>Travel India</title>
+
+  <link rel="stylesheet"
+  href="style.css">
+
+</head>
+
+<body>
+
+  <!-- MUSIC SCREEN -->
+
+  <div class="music-choice"
+  id="musicChoice">
+
+    <div class="music-box">
+
+      <h2>Travel India</h2>
+
+      <p>
+        Enable background music?
+      </p>
+
+      <div class="music-buttons">
+
+        <button onclick="startWithMusic()">
+
+          ON
+
+        </button>
+
+        <button onclick="startWithoutMusic()">
+
+          OFF
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- VIDEO -->
+
+  <video autoplay muted loop
+  playsinline id="bgVideo">
+
+    <source src="travel-video.mp4"
+    type="video/mp4">
+
+  </video>
+
+  <div class="video-overlay"></div>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <h1>Travel India</h1>
+
+    <ul>
+
+      <li><a href="#">Home</a></li>
+
+      <li><a href="#places">Places</a></li>
+
+      <li><a href="#booking">Booking</a></li>
+
+      <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h2>
+      Explore The World
+    </h2>
+
+    <p>
+      Discover luxury destinations
+      and unforgettable journeys.
+    </p>
+
+    <button class="btn"
+    onclick="showMessage()">
+
+      Start Journey
+
+    </button>
+
+  </section>
+
+  <!-- SEARCH -->
+
+  <div class="search-box">
+
+    <input type="text"
+    id="searchInput"
+    placeholder="Search country">
+
+  </div>
+
+  <!-- COUNTRIES -->
+
+  <section class="destinations"
+  id="places">
+
+    <h2 class="title">
+
+      Popular Countries
+
+    </h2>
+
+    <div class="card-container">
+
+      <!-- JAPAN -->
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="overlay">
+
+          <h3>Japan</h3>
+
+          <p>
+            Technology, culture,
+            and modern cities.
+          </p>
+
+          <button class="detail-btn"
+          onclick="openPopup('japan')">
+
+            View Details
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- FRANCE -->
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="overlay">
+
+          <h3>France</h3>
+
+          <p>
+            Romantic cities and
+            historic architecture.
+          </p>
+
+          <button class="detail-btn"
+          onclick="openPopup('france')">
+
+            View Details
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- DUBAI -->
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="overlay">
+
+          <h3>Dubai</h3>
+
+          <p>
+            Luxury lifestyle and
+            iconic skyscrapers.
+          </p>
+
+          <button class="detail-btn"
+          onclick="openPopup('dubai')">
+
+            View Details
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- INDIA -->
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="overlay">
+
+          <h3>India</h3>
+
+          <p>
+            Heritage, culture,
+            and diversity.
+          </p>
+
+          <button class="detail-btn"
+          onclick="openPopup('india')">
+
+            View Details
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- SWITZERLAND -->
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="overlay">
+
+          <h3>Switzerland</h3>
+
+          <p>
+            Snow mountains and
+            scenic landscapes.
+          </p>
+
+          <button class="detail-btn"
+          onclick="openPopup('switzerland')">
+
+            View Details
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- MALDIVES -->
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="overlay">
+
+          <h3>Maldives</h3>
+
+          <p>
+            Beaches and luxury
+            water villas.
+          </p>
+
+          <button class="detail-btn"
+          onclick="openPopup('maldives')">
+
+            View Details
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- ITALY -->
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1525874684015-58379d421a52?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="overlay">
+
+          <h3>Italy</h3>
+
+          <p>
+            Historic monuments
+            and famous food.
+          </p>
+
+          <button class="detail-btn"
+          onclick="openPopup('italy')">
+
+            View Details
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- USA -->
+
+      <div class="card">
+
+        <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="overlay">
+
+          <h3>USA</h3>
+
+          <p>
+            Modern cities and
+            world attractions.
+          </p>
+
+          <button class="detail-btn"
+          onclick="openPopup('usa')">
+
+            View Details
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- BOOKING -->
+
+  <section class="booking"
+  id="booking">
+
+    <h2>Book Your Trip</h2>
+
+    <input type="text"
+    id="name"
+    placeholder="Your Name">
+
+    <input type="email"
+    id="email"
+    placeholder="Your Email">
+
+    <select id="country">
+
+      <option>
+        Choose Country
+      </option>
+
+      <option>Japan</option>
+      <option>France</option>
+      <option>Dubai</option>
+      <option>India</option>
+      <option>Switzerland</option>
+      <option>Maldives</option>
+      <option>Italy</option>
+      <option>USA</option>
+
+    </select>
+
+    <button onclick="bookTrip()">
+
+      Book Now
+
+    </button>
+
+  </section>
+
+  <!-- SUCCESS -->
+
+  <div class="success-box"
+  id="successBox">
+
+    <div class="success-content">
+
+     <h2>
+  Registration Completed🎊
+</h2>
+
+<p>
+  Your registration
+  has been completed.
+</p>
+
+      <button onclick="closeSuccess()">
+
+        Close
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- CONTACT -->
+
+  <section class="contact"
+  id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>Email: travelindia@gmail.com</p>
+
+    <p>Phone: +91 9876543210</p>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h3>Travel India</h3>
+
+    <p>
+      Designed & Developed
+      by Ankit
+    </p>
+
+  </footer>
+
+  <!-- POPUP -->
+
+  <div class="popup"
+  id="popup">
+
+    <div class="popup-content">
+
+      <span class="close-btn"
+      onclick="closePopup()">
+
+        &times;
+
+      </span>
+
+      <div id="popup-details"></div>
+
+    </div>
+
+  </div>
+
+  <!-- MUSIC -->
+
+  <audio id="music" loop>
+
+    <source src="Music.mp3"
+    type="audio/mp3">
+
+  </audio>
+
+  <button id="musicBtn">
+
+    🎵
+
+  </button>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
